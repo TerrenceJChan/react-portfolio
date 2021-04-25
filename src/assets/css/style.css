@@ -1,6 +1,7 @@
 :root {
     --font-standard: 2rem;
-    --standard-transition: 0.2s ease, padding 0.8s linear;
+    --font-header: 4rem;
+    --transition-standard: 0.2s ease, padding 0.8s linear;
     --background: #1A1A1D;
     --text-main: white;
     --text-secondary: #4E4E50;
@@ -12,6 +13,7 @@
 @media only screen and (max-width: 1024px) {
     :root {
         --font-standard: 1rem;
+        --font-header: 2rem;
     }
 }
 
@@ -38,10 +40,25 @@ main {
 
 section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90%;
     width: 80%;
+}
+
+h2, p, img {
+    z-index: 1;
+    background-color: var(--background);
+}
+
+h2 {
+    font-size: var(--font-header);
+}
+
+.highlight-text {
+    color: var(--theme-secondary);
+    font-weight: bold;
 }
 
 /* START Header */
@@ -64,6 +81,13 @@ header nav {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    transition: var(--transition-standard);
+}
+
+header nav:hover {
+    border-top: solid 2px var(--theme-main);
+    border-right: solid 2px var(--theme-main);
+    border-bottom: solid 2px var(--theme-main);
 }
 
 nav ul {
@@ -82,7 +106,7 @@ nav li {
 nav li a {
     text-decoration: none;
     color: var(--theme-tertiary);
-    transition: 0.2s ease, padding 0.8s linear;
+    transition: var(--transition-standard);
 }
 
 nav li a:hover {
@@ -91,4 +115,27 @@ nav li a:hover {
 
 /* END Header */
 
-/* GLOBAL Section */
+/* START Bio */
+
+.profilePicture {
+    border-radius: 50%;
+    border: solid 4px var(--theme-secondary);
+    transition: var(--transition-standard);
+}
+
+.profilePicture:hover {
+    border: solid 4px var(--theme-main);
+}
+
+.bio-text {
+    text-align: justify;
+    width: 700px;
+    color: var(--text-secondary);
+    transition: var(--transition-standard);
+}
+
+.bio-text:hover {
+    color: var(--text-main);
+}
+
+/* END Bio */
