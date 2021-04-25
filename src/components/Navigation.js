@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Nav = () => {
+const Navigation = () => {
     const [menu] = useState([
         {
             text: 'Bio',
@@ -19,8 +19,7 @@ const Nav = () => {
 
     return (
         <header>
-            <nav className="nav">
-                <h2 id="logo">Terrence Chan</h2>
+            <nav>
                 {menu.map((item) => (
                     <li id={`#${currentItem.link === item.link}`} key={item.text}>
                         <a href={`${item.link}`}
@@ -38,4 +37,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default Navigation;
