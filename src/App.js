@@ -1,8 +1,7 @@
 import './assets/css/style.css';
 
 import Particles from 'react-particles-js';
-import Navigation from './components/Navigation';
-import Bio from './components/Bio';
+import Navigation from './components/Header';
 
 function App() {
   return (
@@ -127,9 +126,6 @@ function App() {
       />
       <span className="hamburger">&#9776; Menu</span>
       <Navigation />
-      <main>
-        <Bio />
-      </main>
     </div>
   );
 }

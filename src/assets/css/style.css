@@ -128,16 +128,18 @@ nav li {
     margin-right: 10px;
     font-size: var(--font-standard);
     font-weight: bolder;
+    margin-bottom: var(--font-standard);
 }
 
-nav li a {
+nav li span {
     text-decoration: none;
     color: var(--theme-tertiary);
     transition: var(--transition-standard);
 }
 
-nav li a:hover {
+nav li span:hover {
     color: var(--theme-main);
+    cursor: pointer;
 }
 
 /* END Header */

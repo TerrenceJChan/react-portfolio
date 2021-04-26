@@ -1,40 +1,21 @@
-import React, { useState } from "react"
+import React from 'react';
 
-const Navigation = () => {
-    const [menu] = useState([
-        {
-            text: 'Bio',
-            link: '#bio',
-        },
-        {
-            text: 'Projects',
-            link: '#projects'
-        },
-        {
-            text: 'Contact',
-            link: '#contact'
-        }
-    ]);
-    const [currentItem, setCurrentItem] = useState(menu[0]);
-
+const Navigation = (sectionNum) => {
+    const sections = ['About Me', 'Portfolio', 'Contact', 'Resume'];
     return (
-        <header>
-            <nav>
-                {menu.map((item) => (
-                    <li id={`#${currentItem.link === item.link}`} key={item.text}>
-                        <a href={`${item.link}`}
-                            onClick={() => {
-                                setCurrentItem(item);
-                            }}
-                        >
-                            {item.text}
-                        </a>
+        <nav>
+            <ul>
+                {sections.map((sections) => (
+                    <li
+                        className={sectionNum.currentSection === sections ? "activeSection" : ""}
+                        key={sections}
+                    >
+                        <span onClick={() => sectionNum.setCurrentSection(sections)}>{sections}</span>
                     </li>
                 ))}
-            </nav>
-        </header>
-
-    );
+            </ul>
+        </nav>
+    )
 }
 
 export default Navigation;
