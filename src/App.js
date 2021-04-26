@@ -125,6 +125,7 @@ function App() {
           tmp: {}
         }}
       />
+      <span className="hamburger">&#9776; Menu</span>
       <Navigation />
       <main>
         <Bio />

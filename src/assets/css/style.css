@@ -12,6 +12,15 @@
 
 @media only screen and (max-width: 1024px) {
     :root {
+        --font-paragraph: 1rem;
+        --font-standard: 1.5rem;
+        --font-header: 3rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --font-paragraph: 0.75rem;
         --font-standard: 1rem;
         --font-header: 2rem;
     }
@@ -19,8 +28,8 @@
 
 canvas {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vh;
+    height: 100vw;
 }
 
 body {
@@ -70,7 +79,7 @@ header {
 
 header nav {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     background-color: var(--background);
     border-top: solid 2px var(--theme-secondary);
     border-right: solid 2px var(--theme-secondary);
@@ -88,6 +97,24 @@ header nav:hover {
     border-top: solid 2px var(--theme-main);
     border-right: solid 2px var(--theme-main);
     border-bottom: solid 2px var(--theme-main);
+}
+
+.hamburger {
+    position: absolute;
+    display: none;
+    color: var(--theme-secondary);
+    font-size: var(--font-standard);
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
 }
 
 nav ul {
@@ -136,6 +163,32 @@ nav li a:hover {
 
 .bio-text:hover {
     color: var(--text-main);
+}
+
+@media only screen and (max-width: 1024px) {
+    .profilePicture {
+        width: 300px;
+    }
+    .bio-text {
+        text-align: justify;
+        width: 450px;
+        color: var(--text-secondary);
+        transition: var(--transition-standard);
+        font-size: var(--font-paragraph);
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .profilePicture {
+        width: 200px;
+    }
+    .bio-text {
+        text-align: justify;
+        width: 300px;
+        color: var(--text-secondary);
+        transition: var(--transition-standard);
+        font-size: var(--font-paragraph);
+    }
 }
 
 /* END Bio */
