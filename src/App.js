@@ -1,7 +1,7 @@
 import './assets/css/style.css';
 
 import Particles from 'react-particles-js';
-import Navigation from './components/Header';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -125,7 +125,7 @@ function App() {
         }}
       />
       <span className="hamburger">&#9776; Menu</span>
-      <Navigation />
+      <Header />
     </div>
   );
 }
