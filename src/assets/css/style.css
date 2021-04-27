@@ -58,7 +58,7 @@ section {
     width: 80%;
 }
 
-h1, p, img {
+h1, h2, p, img {
     z-index: 1;
     background-color: var(--background);
 }
@@ -291,6 +291,66 @@ form input {
 }
 
 /* END Contact */
+
+/* START Resume */
+
+.container-resume {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    column-gap: 0px;
+    width: 800px;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 420px) {
+    .container-resume {
+        width: 300px;
+    }
+}
+
+.container-resume h2 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.container-resume ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.container-resume li {
+    color: var(--theme-tertiary);
+    font-size: var(--font-standard);
+    transition: var(--transition-standard);
+    text-align: left;
+}
+
+.container-resume li:hover {
+    color: var(--theme-primary);
+}
+
+#img-resume {
+    margin-top: 16px;
+    border: solid 3px var(--theme-secondary);
+    width: 300px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #img-resume {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #img-resume {
+        width: 75px;
+    }
+}
+
+/* END Resume */
 
 /* START Footer */
 
