@@ -94,7 +94,7 @@ header nav {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  top: 30%;
+  top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   transition: var(--transition-standard);
@@ -359,16 +359,26 @@ form input {
 /* START Footer */
 
 footer {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   margin: 0;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   transition: var(--transition-standard);
+  bottom: 0%;
+  width: 100%;
 }
 
 footer ul {
   list-style-type: none;
+  padding-inline-start: 0px;
+  text-align: center;
+}
+
+footer li {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 footer li a {
@@ -379,29 +389,6 @@ footer li a {
 
 footer li a:hover {
   color: var(--theme-primary);
-}
-
-@media only screen and (min-width: 1024px) {
-  footer {
-    top: 85%;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  footer {
-    position: fixed;
-    bottom: 0%;
-    width: 100%;
-  }
-  footer ul {
-    text-align: center;
-    padding-inline-start: 0px;
-  }
-  footer ul li {
-    display: inline;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
