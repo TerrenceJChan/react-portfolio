@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import resumeThumbnail from '../assets/images/resume-thumbnail.png';
 
 library.add(fab);
 library.add(fas);
@@ -41,7 +40,7 @@ const Resume = () => {
                 <div>
                     <h2>Resume</h2>
                     <a href={process.env.PUBLIC_URL + "/assets/documents/terrence-chan-resume-2021.pdf"} download target="_blank" rel="noreferrer">
-                        <img src={resumeThumbnail} alt="Download Terrence's resume" id="img-resume" />
+                        <img src={process.env.PUBLIC_URL + "/assets/images/resume-thumbnail.png"} alt="Download Terrence's resume" id="img-resume" />
                     </a>
                 </div>
             </div>

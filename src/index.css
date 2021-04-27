@@ -1,13 +1,413 @@
+:root {
+  --font-standard: 2rem;
+  --font-header: 4rem;
+  --transition-standard: 0.2s ease, padding 0.8s linear;
+  --background: #1A1A1D;
+  --text-main: white;
+  --text-secondary: #4E4E50;
+  --theme-primary: #C3073F;
+  --theme-secondary: #950740;
+  --theme-tertiary: #6F2232;
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --font-paragraph: 1rem;
+    --font-standard: 1.5rem;
+    --font-header: 3rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  :root {
+    --font-paragraph: 0.75rem;
+    --font-standard: 1rem;
+    --font-header: 2rem;
+  }
+}
+
+canvas {
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+}
+
 body {
+  background-color: var(--background);
+  color: var(--text-main);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 80%;
+}
+
+h1, h2, p, img {
+  z-index: 1;
+  background-color: var(--background);
+}
+
+h1 {
+  font-size: var(--font-header);
+}
+
+.highlight-text {
+  color: var(--theme-secondary);
+  font-weight: bold;
+}
+
+/* START Header */
+
+header {
+  position: absolute;
+  height: 100vh;
+}
+
+header nav {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--background);
+  border-top: solid 3px var(--theme-secondary);
+  border-right: solid 3px var(--theme-secondary);
+  border-bottom: solid 3px var(--theme-secondary);
+  border-radius: var(--size-radius);
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: var(--transition-standard);
+}
+
+header nav:hover {
+  border-top: solid 3px var(--theme-primary);
+  border-right: solid 3px var(--theme-primary);
+  border-bottom: solid 3px var(--theme-primary);
+}
+
+.hamburger {
+  position: absolute;
+  display: none;
+  color: var(--theme-secondary);
+  font-size: var(--font-standard);
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+nav ul {
+  padding: 10px 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: var(--font-standard);
+  font-weight: bolder;
+  margin-bottom: var(--font-standard);
+}
+
+nav li span {
+  text-decoration: none;
+  color: var(--theme-tertiary);
+  transition: var(--transition-standard);
+}
+
+nav li span:hover {
+  color: var(--theme-primary);
+  cursor: pointer;
+}
+
+/* END Header */
+
+/* START About */
+
+.profilePicture {
+  border-radius: 50%;
+  border: solid 4px var(--theme-secondary);
+  transition: var(--transition-standard);
+}
+
+.profilePicture:hover {
+  border: solid 4px var(--theme-primary);
+}
+
+.bio-text {
+  text-align: justify;
+  width: 700px;
+  color: var(--text-secondary);
+  transition: var(--transition-standard);
+}
+
+.bio-text:hover {
+  color: var(--text-main);
+}
+
+@media only screen and (max-width: 1024px) {
+  .profilePicture {
+    width: 300px;
+  }
+  .bio-text {
+    text-align: justify;
+    width: 450px;
+    color: var(--text-secondary);
+    transition: var(--transition-standard);
+    font-size: var(--font-paragraph);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .profilePicture {
+    width: 200px;
+  }
+  .bio-text {
+    text-align: justify;
+    width: 300px;
+    color: var(--text-secondary);
+    transition: var(--transition-standard);
+    font-size: var(--font-paragraph);
+  }
+}
+
+/* END About */
+
+/* START Card */
+
+.card {
+  padding: calc(4 * var(--size-bezel));
+  margin-top: calc(4 * var(--size-bezel));
+  border-radius: var(--size-radius);
+  border: 3px solid var(--theme-tertiary);
+  box-shadow: .5rem .5rem 0 var(--theme-tertiary);
+  transition: var(--transition-standard);
+}
+
+.card:hover {
+  border: 3px solid var(--theme-primary, var(--theme-primary));
+  box-shadow: .5rem .5rem 0 var(--theme-primary, var(--theme-primary));
+}
+
+.card label {
+  position: relative;
+}
+
+.card label input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid var(--theme-tertiary);
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  color: var(--text-main);
+  background-color: var(--background);
+  border-radius: var(--size-radius);
+}
+
+.card label input:not(:-moz-placeholder-shown)+.label-textl {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--theme-secondary);
+}
+
+.card label input:not(:-ms-input-placeholder)+.label-text {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--theme-secondary);
+}
+
+.card label input:focus+.label-text, .card label input:not(:placeholder-shown)+.label-text {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--theme-secondary);
+  background-color: var(--background);
+}
+
+.card label .label-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+button {
+  margin-top: 20px;
+  color: var(--text-main);
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  background: var(--theme-tertiary);
+  border: none;
+  border-radius: var(--size-radius);
+  font-weight: 900;
+  transition: var(--transition-standard);
+}
+
+button:hover {
+  background: var(--theme-primary);
+}
+
+button+button {
+  margin-left: calc(var(--size-bezel) * 2);
+}
+
+/* END Card */
+
+/* START Contact */
+
+form {
+  z-index: 1;
+}
+
+form input {
+  margin-bottom: 20px;
+}
+
+/* END Contact */
+
+/* START Resume */
+
+.container-resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  column-gap: 0px;
+  width: 800px;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 420px) {
+  .container-resume {
+    width: 300px;
+  }
+}
+
+.container-resume h2 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.container-resume ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.container-resume li {
+  color: var(--theme-tertiary);
+  font-size: var(--font-standard);
+  transition: var(--transition-standard);
+  text-align: left;
+}
+
+.container-resume li:hover {
+  color: var(--theme-primary);
+}
+
+#img-resume {
+  margin-top: 16px;
+  border: solid 3px var(--theme-secondary);
+  width: 300px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #img-resume {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #img-resume {
+    width: 75px;
+  }
+}
+
+/* END Resume */
+
+/* START Footer */
+
+footer {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: var(--transition-standard);
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li a {
+  color: var(--theme-tertiary);
+  font-size: var(--font-header);
+  transition: var(--transition-standard);
+}
+
+footer li a:hover {
+  color: var(--theme-primary);
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    top: 85%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+  }
+  footer ul {
+    text-align: center;
+    padding-inline-start: 0px;
+  }
+  footer ul li {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    margin-bottom: -35px;
+  }
+}
+
+/* END Footer */
