@@ -9,14 +9,14 @@ const Header = () => {
     const [currentSection, setCurrentSection] = useState("About Me");
     const renderSection = () => {
         switch (currentSection) {
-            case "About Me":
+            default:
                 return <About />;
             case "Portfolio":
                 return <Project />;
             case "Contact":
-                return <Resume />;
-            case "Resume":
                 return <Contact />;
+            case "Resume":
+                return <Resume />;
         }
     }
 

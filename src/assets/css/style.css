@@ -87,7 +87,7 @@ header nav {
     margin: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    top: 50%;
+    top: 30%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     transition: var(--transition-standard);
@@ -144,7 +144,7 @@ nav li span:hover {
 
 /* END Header */
 
-/* START Bio */
+/* START About */
 
 .profilePicture {
     border-radius: 50%;
@@ -193,4 +193,60 @@ nav li span:hover {
     }
 }
 
-/* END Bio */
+/* END About */
+
+/* START Contact */
+form {
+    z-index: 1;
+}
+/* END Contact */
+
+/* START Footer */
+
+footer {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: var(--transition-standard);
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer li a {
+    color: var(--theme-tertiary);
+    font-size: var(--font-header);
+    transition: var(--transition-standard);
+}
+
+footer li a:hover {
+    color: var(--theme-main);
+}
+
+@media only screen and (min-width: 1024px) {
+    footer {
+        top: 85%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    footer {
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+    }
+    footer ul {
+        text-align: center;
+        padding-inline-start: 0px;
+    }
+    footer ul li {
+        display: inline;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* END Footer */

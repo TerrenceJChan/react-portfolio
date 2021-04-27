@@ -3,7 +3,7 @@ import React from 'react';
 const Resume = (sectionNum) => {
     return (
         <section>
-            <p>Yo!</p>
+            <p>Add Resume!</p>
         </section>
     )
 }
