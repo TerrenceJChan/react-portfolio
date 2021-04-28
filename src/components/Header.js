@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import About from '../components/About';
-import Project from './Portfolio';
+import Portfolio from './Portfolio';
 import Resume from '../components/Resume';
 import Contact from '../components/Contact';
 
@@ -12,7 +12,7 @@ const Header = () => {
             default:
                 return <About />;
             case "Portfolio":
-                return <Project />;
+                return <Portfolio />;
             case "Contact":
                 return <Contact />;
             case "Resume":

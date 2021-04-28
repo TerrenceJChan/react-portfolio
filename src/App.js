@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div>
-      <Particles
+      {/* <Particles
         params={{
           particles: {
             number: {
@@ -124,7 +124,7 @@ function App() {
           },
           tmp: {}
         }}
-      />
+      /> */}
       <span className="hamburger">&#9776; Menu</span>
       <Header />
       <Footer />

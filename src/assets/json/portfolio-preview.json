@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Budget Tracker",
+        "file": "budget-tracker.png",
+        "tags": "",
+        "description": "Tracks your income and expenditures in a convenient PWA app.",
+        "github": "",
+        "deployment": ""
+    },
+    {
+        "name": "Dangles Fantasy Sports",
+        "file": "dangles-fantasy-sports.png",
+        "tags": "",
+        "description": "Select NHL hockey players to make up your dream fantasy team.",
+        "github": "",
+        "deployment": ""
+    },
+    {
+        "name": "JavaScript Coding Quiz",
+        "file": "javascript-coding-quiz.png",
+        "tags": "",
+        "description": "A JavaScript demo that features timers and localstorage manipulation.",
+        "github": "",
+        "deployment": ""
+    },
+    {
+        "name": "Note Taker",
+        "file": "note-taker.png",
+        "tags": "",
+        "description": "Saves notes onto a Heroku server using MySQL and Express.",
+        "github": "",
+        "deployment": ""
+    },
+    {
+        "name": "Online Barkeep",
+        "file": "online-barkeep.png",
+        "tags": "",
+        "description": "Uses API calls to access a gigantic library of alcoholic beverages.",
+        "github": "",
+        "deployment": ""
+    },
+    {
+        "name": "Weather Dashboard",
+        "file": "weather-dashboard.png",
+        "tags": "",
+        "description": "Uses OpenWeatherMap to provide your locale's weather.",
+        "github": "",
+        "deployment": ""
+    }
+]

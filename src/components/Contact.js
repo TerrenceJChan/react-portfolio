@@ -40,7 +40,7 @@ const Contact = () => {
     return (
         <section>
             <h1>Contact</h1>
-            <form className="card" autocomplete="off" onSubmit={handleSubmit}>
+            <form className="card" autoComplete="off" onSubmit={handleSubmit}>
                 <label htmlFor="name">
                     <input type="text" name="name" defaultValue={name} onBlur={handleChange} required />
                     <span className="label-text">Name</span>

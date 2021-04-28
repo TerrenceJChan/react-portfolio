@@ -1,3 +1,5 @@
+/* @import "react-slideshow-image/dist/styles.css"; */
+
 :root {
   --font-standard: 2rem;
   --font-header: 4rem;
@@ -283,6 +285,45 @@ button+button {
 }
 
 /* END Card */
+
+/* START Portfolio*/
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+.slide-container {
+  z-index: 1;
+  height: 200px;
+}
+
+/* .portfolio {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100px 100px 100px;
+  z-index: 1;
+}
+
+.portfolio-item {
+  width: 100%;
+}
+
+.portfolio-item img {
+  width: 100%;
+} */
+
+/* END Portfolio*/
 
 /* START Contact */
 
