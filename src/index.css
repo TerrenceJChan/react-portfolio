@@ -101,6 +101,10 @@ header nav {
   transition: var(--transition-standard);
 }
 
+.active {
+  color: var(--text-main);
+}
+
 header nav:hover {
   border-top: solid 3px var(--theme-primary);
   border-right: solid 3px var(--theme-primary);
