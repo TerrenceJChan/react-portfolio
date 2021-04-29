@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Budget Tracker",
+        "file": "budget-tracker.png",
+        "description": "Conveniently track your income and expenses with this PWA.",
+        "github": "https://github.com/TerrenceJChan/budget-tracker",
+        "deployment":"https://ancient-ravine-50926.herokuapp.com/"
+    },
+    {
+        "title": "Dangles Fantasy Sports",
+        "file": "dangles.png",
+        "description": "Fantasy NHL simulator.",
+        "github": "https://github.com/uoft-project2-group7/project",
+        "deployment":"https://intense-headland-44008.herokuapp.com/"
+    },
+    {
+        "title": "JavaScript Coding Quiz",
+        "file": "javascript-coding-quiz.png",
+        "description": "Demo featuring timers and localstorage manipulation.",
+        "github": "https://github.com/TerrenceJChan/coding-quiz",
+        "deployment":"https://terrencejchan.github.io/coding-quiz/"
+    },
+    {
+        "title": "Note Taker",
+        "file": "note-taker.png",
+        "description": "Save notes to the web with this Heroku app.",
+        "github": "https://github.com/TerrenceJChan/note-taker",
+        "deployment":"https://young-fjord-40430.herokuapp.com/"
+    },
+    {
+        "title": "Online Barkeep",
+        "file": "online-barkeep.png",
+        "description": "Discover new mixes and drinks.",
+        "github": "https://github.com/uoft-project1-group5/cocktail-map",
+        "deployment":"https://uoft-project1-group5.github.io/cocktail-map/index.html##"
+    },
+    {
+        "title": "Weather Dashboard",
+        "file": "weather-dashboard.png",
+        "description": "Find the weather of towns and cities around the world.",
+        "github": "https://github.com/TerrenceJChan/weather-dashboard",
+        "deployment":"https://terrencejchan.github.io/weather-dashboard/"
+    }
+]

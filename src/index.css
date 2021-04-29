@@ -29,7 +29,7 @@
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   width: 100vh;
   height: 100vw;
   z-index: -1;
@@ -80,7 +80,7 @@ h1 {
 /* START Header */
 
 header {
-  position: absolute;
+  position: fixed;
   height: 100vh;
 }
 
@@ -286,18 +286,25 @@ button+button {
 /* END Card */
 
 /* START Portfolio */
-
-.active {
-  width: 100%;
+::-webkit-scrollbar {
+  display:none;
+}
+.portfolio-wrapper {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
-.carousel-item {
-  overflow: hidden;
-  width: 100%;
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.carousel-item img {
-  width: 100%;
+.portfolio ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 /* END Portfolio */
