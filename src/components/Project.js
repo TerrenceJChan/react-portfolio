@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project = (project) => {
     return (
-        <li  className="project">
+        <div  className="project">
             <div>
                 <img src={process.env.PUBLIC_URL + `/images/portfolio/${project.item.file}` } alt={`Thumbnail of ${project.item.title}`}>
                 </img>
@@ -13,7 +13,7 @@ const Project = (project) => {
                 <p><a href={project.item.github}>GitHub Repository</a></p>
                 <p><a href={project.item.deployment}>Deployment</a></p>
             </div>
-        </li>
+        </div>
     )
 }
 

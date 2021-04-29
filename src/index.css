@@ -313,7 +313,6 @@ button+button {
 .project {
   display: flex;
   flex-wrap: wrap-reverse;
-  justify-content: center;
   gap: 40px;
   border-top: solid 3px var(--theme-tertiary);
   border-bottom: solid 3px var(--theme-tertiary);
@@ -325,11 +324,6 @@ button+button {
 .project:hover {
   border-top: solid 3px var(--theme-primary);
   border-bottom: solid 3px var(--theme-primary);
-}
-
-.portfolio-projects-wrapper {
-  list-style-type: none;
-  padding-inline-start: 0px;
 }
 
 .project a {

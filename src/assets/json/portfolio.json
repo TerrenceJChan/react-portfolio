@@ -1,6 +1,6 @@
 [
     {
-        "key": 0,
+        "key": "0",
         "title": "Budget Tracker",
         "file": "budget-tracker.png",
         "description": "Conveniently track your income and expenses with this PWA.",
@@ -8,7 +8,7 @@
         "deployment":"https://ancient-ravine-50926.herokuapp.com/"
     },
     {
-        "key": 1,
+        "key": "1",
         "title": "Dangles Fantasy Sports",
         "file": "dangles.png",
         "description": "Fantasy NHL simulator.",
@@ -16,7 +16,7 @@
         "deployment":"https://intense-headland-44008.herokuapp.com/"
     },
     {
-        "key": 2,
+        "key": "2",
         "title": "JavaScript Coding Quiz",
         "file": "javascript-coding-quiz.png",
         "description": "Demo featuring timers and localstorage manipulation.",
@@ -24,7 +24,7 @@
         "deployment":"https://terrencejchan.github.io/coding-quiz/"
     },
     {
-        "key": 3,
+        "key": "3",
         "title": "Note Taker",
         "file": "note-taker.png",
         "description": "Save notes to the web with this Heroku app.",
@@ -32,7 +32,7 @@
         "deployment":"https://young-fjord-40430.herokuapp.com/"
     },
     {
-        "key": 4,
+        "key": "4",
         "title": "Online Barkeep",
         "file": "online-barkeep.png",
         "description": "Discover new mixes and drinks.",
@@ -40,7 +40,7 @@
         "deployment":"https://uoft-project1-group5.github.io/cocktail-map/index.html##"
     },
     {
-        "key": 5,
+        "key": "5",
         "title": "Weather Dashboard",
         "file": "weather-dashboard.png",
         "description": "Find the weather of towns and cities around the world.",
