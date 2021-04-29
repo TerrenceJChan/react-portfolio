@@ -32,6 +32,7 @@ canvas {
   position: absolute;
   width: 100vh;
   height: 100vw;
+  z-index: -1;
 }
 
 body {
@@ -283,6 +284,23 @@ button+button {
 }
 
 /* END Card */
+
+/* START Portfolio */
+
+.active {
+  width: 100%;
+}
+
+.carousel-item {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+/* END Portfolio */
 
 /* START Contact */
 
