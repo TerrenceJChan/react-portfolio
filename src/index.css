@@ -116,6 +116,17 @@ header nav:hover {
   margin-top: 20px;
 }
 
+.text-regular {
+  text-align: justify;
+  width: 700px;
+  color: var(--text-secondary);
+  transition: var(--transition-standard);
+}
+
+.text-regular:hover {
+  color: var(--text-main);
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     display: none;
@@ -164,22 +175,11 @@ nav li span:hover {
   border: solid 4px var(--theme-primary);
 }
 
-.bio-text {
-  text-align: justify;
-  width: 700px;
-  color: var(--text-secondary);
-  transition: var(--transition-standard);
-}
-
-.bio-text:hover {
-  color: var(--text-main);
-}
-
 @media only screen and (max-width: 1024px) {
   .profilePicture {
     width: 300px;
   }
-  .bio-text {
+  .text-regular {
     text-align: justify;
     width: 450px;
     color: var(--text-secondary);
@@ -192,7 +192,7 @@ nav li span:hover {
   .profilePicture {
     width: 200px;
   }
-  .bio-text {
+  .text-regular {
     text-align: justify;
     width: 300px;
     color: var(--text-secondary);
@@ -286,25 +286,56 @@ button+button {
 /* END Card */
 
 /* START Portfolio */
+
 ::-webkit-scrollbar {
-  display:none;
+  display: none;
 }
+
 .portfolio-wrapper {
   display: flex;
-  height: 400px;
   flex-direction: column;
+  height: 550px;
   overflow-y: scroll;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .portfolio-wrapper {
+    height: 400px;
+  }
 }
 
 .project {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
   gap: 40px;
+  border-top: solid 3px var(--theme-tertiary);
+  border-bottom: solid 3px var(--theme-tertiary);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition-standard);
 }
 
-.portfolio ul {
+.project:hover {
+  border-top: solid 3px var(--theme-primary);
+  border-bottom: solid 3px var(--theme-primary);
+}
+
+.portfolio-projects-wrapper {
   list-style-type: none;
   padding-inline-start: 0px;
+}
+
+.project a {
+  text-decoration: none;
+  color: var(--theme-tertiary);
+  transition: var(--transition-standard);
+}
+
+.project a:hover {
+  color: var(--theme-primary);
 }
 
 /* END Portfolio */

@@ -8,11 +8,11 @@ const Portfolio = () => {
         <section>
             <h1>Portfolio</h1>
             <div className="portfolio-wrapper">
-                <div className="portfolio-projects-wrapper">
+                <ul className="portfolio-projects-wrapper">
                     {projects.map(item => (
-                        <Project item={item} />
+                        <Project key={item.key} item={item}/>
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
     )
